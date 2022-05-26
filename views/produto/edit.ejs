@@ -1,0 +1,24 @@
+<%- include("../partials/header") -%>
+<div class="menucliente">
+    <li><a href="http://localhost:3535/produto">Produto</a></li>
+    <li><a href="http://localhost:3535/produto/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/produto/relatorio">Relatorio</a></li>
+</div>
+
+<div  class="formCadastro">
+    <div class="titleClients">  
+         <h3>Editar Produto</h3>
+    </div>
+ 
+    <form action="/produto/update" method="post">
+        <input type="hidden" value="<%= produto.id %>" name="id">
+        Produto: <input type="text" value="<%= produto.nome %>" name="nome" style="width: 300px"><br>
+        Valor: <input type="number" value="<%= produto.valor %>" min="0" max="10000" step=".01" name="valor" style="width: 100px;"><br>
+        Quantidade: <input type="text"  value="<%= produto.quantidade %>" name="quantidade" width="60%"><br>
+        
+        <button class="btnEditar">Editar</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") -%>

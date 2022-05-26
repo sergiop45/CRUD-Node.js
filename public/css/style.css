@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  Geneva, Tahoma, sans-serif,Verdana;
+}
+button {
+    cursor: pointer;
+}
+body {
+    text-align: center;
+    background-color: #87CEFA;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+tr {
+    margin-bottom: 20px;
+}
+header { 
+    background-color: #00CED1;
+    text-align: center;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    color: black	;
+    
+}
+header h3 {
+    float: left;
+    margin-left: 10px;
+}
+header h1 {
+    font-size: 300%;
+    margin: 0 auto;
+}
+.btnMenu {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+#menu {
+    margin-left: 0;
+    float: left;
+    list-style: none;
+    background-color: #87CEFA	;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    display: none;
+    margin-right: -100px;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+#menu li a {
+    text-decoration: none;
+    color: black;
+    
+}
+#menu li {
+    background-color: #00CED1;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+#menu li:hover {
+    text-decoration: underline;
+    background-color: #48D1CC;
+}
+
+.menucliente {
+    
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+    border-radius: 5px;
+    background-color: #00CED1;
+    color: black;
+    list-style: none;
+    margin-bottom: 5%;
+}
+
+.menucliente li a{
+    
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+.menucliente li a:hover {
+    text-decoration: underline;
+}
+
+#clientsList {
+    
+    text-align: start;
+    display: inline-flex;
+    flex-direction: column;
+
+    background-color: #E0FFFF;
+    color: black;
+    font-size: 18px;
+    border: solid #00CED1 1px;
+    border-radius: 4px;
+}
+.itemLista {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: solid #00CED1 1px;
+}
+.titleClients {
+    padding: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: solid #00CED1 1px;
+}
+
+#clientsRelatorio {
+    display: inline-block;
+    margin: 0 5%;
+    background-color: #E0FFFF;
+    color: black;
+    font-size: 18px;
+    border: solid #00CED1 1px;
+    border-radius: 4px;
+
+}
+
+.formCadastro {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #E0FFFF;
+    color: black;
+    font-size: 18px;
+    border: solid #00CED1 1px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.formCadastro form {
+    text-align: start;
+    padding: 10px;
+}
+.formCadastro input {
+    
+    margin: 10px 0;
+    padding: 2px 4px;
+    font-size: 16px;
+    border: solid #00CED1 1px;
+    border-radius: 5px;
+}
+.formCadastro input:focus, .formCadastro textarea:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.formCadastro textarea {
+    display: inherit;
+    margin-top: 10px;
+    padding: 2px 4px;
+    font-size: 16px;
+    border: solid #00CED1 1px;
+    border-radius: 5px;
+}
+.formCadastro button {
+    margin: 10px 0;
+    float: right;
+}
+
+
+.btnEditar {
+    background-color: green;
+    padding: 8px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    
+    margin-top: -6px;
+}
+.btnDelete {
+    
+    background-color: red;
+    padding: 8px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    
+    margin: 0 10px;
+    margin-top: -6px;
+}
+
+
+footer {
+    
+    background-color: #00CED1;
+    padding: 25px 0;
+    margin-top: 40%;
+
+}

@@ -1,0 +1,20 @@
+<%- include("../partials/header") -%>
+<div class="menucliente">
+    <li><a href="http://localhost:3535/users">Usuarios</a></li>
+    <li><a href="http://localhost:3535/users/cadastro">Cadastro de Usuarios</a></li>
+</div>
+
+<div  class="formCadastro" style="margin-left: 30px;">
+    <h1 class="titleClients">Cadastro de Usuario</h1>
+    <form action="/users" method="post">
+        Usuario: <input type="text" name="user" style="width: 150px"><br>
+        Senha: <input type="password" name="password" style="width: 150px"><br>
+        <% if( teste != undefined ) { %>
+            <p style="color: red; font-size: 10px;">Email ja cadastrado! Tente outro</p>
+        <% } %>    
+        <button class="btnEditar">Cadastrar</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") -%>

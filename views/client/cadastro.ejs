@@ -1,0 +1,22 @@
+<%- include("../partials/header") -%>
+<div class="menucliente">
+    <li><a href="http://localhost:3535/cliente">Clientes</a></li>
+    <li><a href="http://localhost:3535/cliente/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/cliente/relatorio">Relatorio</a></li>
+</div>
+
+<div  class="formCadastro">
+    <h1 class="titleClients">Cadastro de Cliente</h1>
+    <form action="/cliente" method="post">
+        Nome: <input type="text" name="name" style="width: 535px"><br>
+        CPF: <input type="text" name="cpf" style="width: 40%"><br>
+        Telefone: <input type="number" name="phone" style="width: 40%;"><br>
+        Email: <input type="text" name="email" width="60%"><br>
+        Endereço: <input type="text" name="adress" style="width: 500px"><br>
+        Observação: <textarea name="observacao" id="" rows="5" cols="40"></textarea><br>
+        <button class="btnEditar">Cadastrar</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") -%>

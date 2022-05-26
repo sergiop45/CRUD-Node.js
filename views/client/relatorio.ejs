@@ -1,0 +1,50 @@
+<%- include("../partials/header") -%>
+
+<div class="menucliente">
+    <li><a href="http://localhost:3535/cliente">Clientes</a></li>
+    <li><a href="http://localhost:3535/cliente/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/cliente/relatorio">Relatorio</a></li>
+</div>
+
+
+<div id="clientsRelatorio">
+    <div class="titleClients">
+        <h3>Relatorio - Clientes</h3>
+    </div>
+
+    <table border="2">
+        <% cliente.forEach(cliente => { %>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Observação</th>
+        </tr>
+        
+        <tr>
+            <td><%= cliente.id %></td>
+            <td><%= cliente.nome %></td>
+            <td><%= cliente.cpf %></td>
+            <td rowspan="3"><%= cliente.observacao%></td>
+        </tr>
+        <tr>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Endereco</th>
+            
+        </tr>
+        <tr >
+            <td><%= cliente.telefone %></td>
+            <td><%= cliente.emailClient %></td>
+            <td><%= cliente.endereco %></td>
+        </tr>
+        
+    <% }) %>
+    </table>
+
+
+
+
+</div>
+
+<%- include("../partials/footer") -%>

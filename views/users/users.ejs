@@ -1,0 +1,22 @@
+<%- include("../partials/header") -%>
+
+<div class="menucliente" >
+    <li><a href="http://localhost:3535/users">Usuarios</a></li>
+    <li><a href="http://localhost:3535/users/cadastro">Cadastro Usuarios</a></li>
+</div>
+
+
+<div id="clientsList">
+    <div class="titleClients">
+        <h3>Usuarios</h3>
+    </div>
+
+<% user.forEach(user => { %>
+    <p  class="itemLista"> <%= user.user %> -
+     <a href="http://localhost:3535/users/edit/<%= user.id %>"><button class="btnEditar">Editar</button></a> <a href="http://localhost:3535/users/delete/<%= user.id%>"><button class="btnDelete">Deletar</button></a></p>
+    
+<% }) %>
+
+</div>
+
+<%- include("../partials/footer") -%>

@@ -1,0 +1,46 @@
+<%- include("../partials/header") -%>
+
+<div class="menucliente">
+    <li><a href="http://localhost:3535/cliente">Clientes</a></li>
+    <li><a href="http://localhost:3535/cliente/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/cliente/relatorio">Relatorio</a></li>
+</div>
+
+
+<div id="clientsList">
+    <div class="titleClients">
+        <h3>Clientes</h3>
+    </div>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>nome</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+</table>
+
+
+
+<% cliente.forEach(cliente => { %>
+    <p  class="itemLista"> <%= cliente.id %>
+        <%= cliente.nome %>
+        
+            
+            <a class="btnEditar" href="/cliente/edit/<%= cliente.id %>">Editar</a>
+            <a href="/cliente/delete/<%= cliente.id %>"><button class="btnDelete">Deletar</button></a></p>
+    
+<% }) %>
+        
+    
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<%- include("../partials/footer") -%>

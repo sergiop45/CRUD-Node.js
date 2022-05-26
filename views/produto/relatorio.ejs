@@ -1,0 +1,27 @@
+<%- include("../partials/header") -%>
+
+<div class="menucliente">
+    <li><a href="http://localhost:3535/produto">Clientes</a></li>
+    <li><a href="http://localhost:3535/produto/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/produto/relatorio">Relatorio</a></li>
+</div>
+
+
+<div id="clientsRelatorio">
+    <div class="titleClients">
+        <h3>Relatorio - Produtos</h3>
+    </div>
+
+
+
+
+<% produto.forEach(produto => { %>
+    <p class="itemLista"><%= produto.id %> - <%= produto.nome %> -
+        R$ <%= produto.valor %> - <%= produto.quantidade %> - <%= produto.createdAt %> -
+         <%= produto.updateAt %> </p>
+    
+<% }) %>
+
+</div>
+
+<%- include("../partials/footer") -%>

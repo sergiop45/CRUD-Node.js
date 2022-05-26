@@ -1,0 +1,19 @@
+<%- include("../partials/header") -%>
+<div class="menucliente">
+    <li><a href="http://localhost:3535/users">Usuarios</a></li>
+    <li><a href="http://localhost:3535/users/cadastro">Cadastro de Usuarios</a></li>
+</div>
+
+<div  class="formCadastro" style="margin-left: 30px;">
+    <h1 class="titleClients">Edição de Usuario</h1>
+    <form action="/users/update" method="post">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        Usuario: <input type="text" name="user" value="<%= user.user %>" style="width: 150px"><br>
+        Nova Senha: <input type="password" name="password" style="width: 150px"><br>
+          
+        <button class="btnEditar">Editar</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") -%>

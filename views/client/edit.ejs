@@ -1,0 +1,23 @@
+<%- include("../partials/header") -%>
+<div class="menucliente">
+    <li><a href="http://localhost:3535/cliente">Clientes</a></li>
+    <li><a href="http://localhost:3535/cliente/cadastro">Cadastro</a></li>
+    <li><a href="http://localhost:3535/cliente/relatorio">Relatorio</a></li>
+</div>
+
+<div  class="formCadastro">
+    <h1 class="titleClients">Editar Cliente</h1>
+    <form action="/cliente/update" method="post">
+        Nome: <input value="<%= cliente.nome %>" type="text" name="name" style="width: 535px"><br>
+        CPF: <input value="<%= cliente.cpf %>" type="text" name="cpf" style="width: 40%"><br>
+        Telefone: <input value="<%= cliente.telefone %>" type="number" name="phone" style="width: 40%;"><br>
+        Email: <input value="<%= cliente.emailClient %>" type="text" name="email" width="60%"><br>
+        Endereço: <input value="<%= cliente.endereco %>" type="text" name="adress" style="width: 500px"><br>
+        Observação: <textarea value="<%= cliente.observacao %>" name="observacao" id="" rows="5" cols="40"></textarea><br>
+        <input type="hidden" name="id" value="<%= cliente.id %>">
+        <button class="btnEditar">Editar</button>
+    </form>
+</div> 
+
+
+<%- include("../partials/footer") -%>

@@ -1,0 +1,18 @@
+<%- include("../partials/header") -%>
+
+
+<h2 style="color: red;" >Você tentou acessar uma funcao liberada apenas para o Administrador.</h2>
+<h1 style="color: red;">Logue como Administrador</h1>
+<div  class="formCadastro" style="margin-top: 5%;">
+    <h1 class="titleClients">Login</h1>
+    <form action="/users/authenticate" method="post">
+        
+        Usuario: <input type="text" name="user" style="width: 150px"><br>
+        Senha: <input type="password" name="password" style="width: 150px"><br>
+       
+        <button class="btnEditar">Login</button>
+    </form>
+</div>
+
+
+<%- include("../partials/footer") -%>
